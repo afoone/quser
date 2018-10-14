@@ -1,2 +1,1 @@
-docker cp target/quser-1.0.jar quser_web_1:/usr/local/tomcat/webapps/ROOT.war
-
+cp target/quser.war /usr/local/Cellar/tomcat/9.0.12/libexec/webapps/

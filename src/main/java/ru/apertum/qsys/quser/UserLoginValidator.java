@@ -61,7 +61,7 @@ public class UserLoginValidator extends AbstractValidator {
             } else {
                 // Sessions.getCurrent().getRemoteHost() Deprecated. as of release 7.0.0, use Execution.getRemoteHost() instead.
                 // Sessions.getCurrent().getRemoteAddr() Deprecated. as of release 7.0.0, use Execution.getRemoteAddr() instead.
-                QLog.l().logQUser().trace(Sessions.getCurrent().hashCode() + " - User validate RemoteHost=" + Sessions.getCurrent().getRemoteHost() + " RemoteAddr=" + Sessions.getCurrent().getRemoteAddr()
+                System.out.println(Sessions.getCurrent().hashCode() + " - User validate RemoteHost=" + Sessions.getCurrent().getRemoteHost() + " RemoteAddr=" + Sessions.getCurrent().getRemoteAddr()
                         + " LocalAddr=" + Sessions.getCurrent().getLocalAddr() + " LocalName=" + Sessions.getCurrent().getLocalName() + " ServerName=" + Sessions.getCurrent().getServerName());
                 //if (!QSessions.getInstance().check(usr.getId(), Sessions.getCurrent().getRemoteHost(), Sessions.getCurrent().getRemoteAddr().getBytes())) {
                 if (!QSessions.getInstance().check(usr.getId(), "" + Sessions.getCurrent().hashCode(), ("" + Sessions.getCurrent().hashCode()).getBytes())) {
