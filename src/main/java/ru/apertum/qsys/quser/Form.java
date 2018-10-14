@@ -98,7 +98,7 @@ public class Form {
     }
 
     /**
-     * Это нужно чтоб делать include во view и потом связывать @Wire("#incClientDashboard #incChangePriorityDialog #changePriorityDlg")
+     * Es necesario incluir en la vista y luego enlazar. @Wire("#incClientDashboard #incChangePriorityDialog #changePriorityDlg")
      *
      * @param view
      */
@@ -144,10 +144,10 @@ public class Form {
     }
 
     //*****************************************************
-    //**** Логин
+    //**** Login
     //*****************************************************
     /**
-     * Залогиневшейся юзер
+     * Usuario registrado
      */
     private User user = new User();
 
@@ -162,7 +162,8 @@ public class Form {
     @Command
     @NotifyChange(value = {"btnsDisabled", "login", "user", "postponList", "customer", "avaitColumn"})
     public void login() {
-        QLog.l().logQUser().debug("Login " + user.getName());
+        QLog.l().logQUser().
+                debug("Login " + user.getName());
 
         final Session sess = Sessions.getCurrent();
         sess.setAttribute("userForQUser", user);
@@ -581,7 +582,7 @@ public class Form {
         });
     }
     //********************************************************************************************************************************************
-    //** Перенаправление
+    //** Redireccion
     //********************************************************************************************************************************************
     private final TreeServices treeServs = new TreeServices();
 
