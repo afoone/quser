@@ -78,7 +78,7 @@
             <groupId>ru.apertum</groupId>
             <artifactId>qsystem</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -131,12 +131,18 @@
             <artifactId>spring-orm</artifactId>
             <version>4.0.0.RELEASE</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.sun.jdmk/jmxtools -->
+        <dependency>
+            <groupId>com.sun.jdmk</groupId>
+            <artifactId>jmxtools</artifactId>
+            <version>1.2.1</version>
+        </dependency>
 
 
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.15</version>
+            <version>1.2.16</version>
         </dependency>
 
 

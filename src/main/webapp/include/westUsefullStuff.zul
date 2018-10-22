@@ -7,7 +7,7 @@
                 <panel width="100%" border="normal" title="Новое окно">
                     <panelchildren style="padding:5px;">
                         <vbox>
-                            <toolbarbutton label="Home" href="http://rambler.ru" target="_blank"  />
+                            <toolbarbutton label="Home" href="http://iprocuratio.com" target="_blank"  />
                             <toolbarbutton label="Sitemap" />
                             <toolbarbutton label="Statement of Direction" />
                             <toolbarbutton label="ZK Team" />

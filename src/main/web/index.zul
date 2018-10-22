@@ -51,17 +51,17 @@
         </north>
         
         
-        <west visible="false" title="Полезные материалы" size="25%" hflex="true" maxsize="250" splittable="true" collapsible="true">
+        <!--west visible="false" title="Useful materials" size="25%"  maxsize="250" splittable="true" collapsible="true">
             <include src="/include/westUsefullStuff.zul"/>
-        </west>
+        </west-->
         
-        <center border="none" hflex="true">
+        <center border="none" >
             <include id="incClientDashboard" src="/include/clientDashboard.zul"/>
             
         </center>
         
         
-        <east title="${c:l('management')}" size="220px"  hflex="false">
+        <east title="${c:l('management')}" size="220px"  >
             <div align="center">
                 
                 <vlayout>

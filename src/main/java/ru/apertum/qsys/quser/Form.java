@@ -162,8 +162,7 @@ public class Form {
     @Command
     @NotifyChange(value = {"btnsDisabled", "login", "user", "postponList", "customer", "avaitColumn"})
     public void login() {
-        QLog.l().logQUser().
-                debug("Login " + user.getName());
+        System.out.println("Login " + user.getName());
 
         final Session sess = Sessions.getCurrent();
         sess.setAttribute("userForQUser", user);
@@ -335,7 +334,7 @@ public class Form {
     @Command
     @NotifyChange(value = {"btnsDisabled", "customer", "avaitColumn"})
     public void invite() {
-        QLog.l().logQUser().debug("Invite by " + user.getName());
+        QLog.l().logQUser().debug("Invited by " + user.getName());
         final CmdParams params = new CmdParams();
         params.userId = user.getUser().getId();
         final RpcInviteCustomer result = (RpcInviteCustomer) Executer.getInstance().getTasks().get(Uses.TASK_INVITE_NEXT_CUSTOMER).process(params, "", new byte[4]);

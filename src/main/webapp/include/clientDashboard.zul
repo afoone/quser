@@ -5,10 +5,10 @@
     <borderlayout>
         
                 
-        <center border="none" hflex="true">
+        <center border="none" hflex="min">
             <panel title="${c:l('postponed_clients')}" border="normal" height="100%">
                 <panelchildren>
-                    <listbox  id="postpone_list" model="@load(fmodel.postponList)" selectedItem="@bind(fmodel.pickedPostponed)" width="" height="" onSelect="" vflex="true">
+                    <listbox  id="postpone_list" model="@load(fmodel.postponList)" selectedItem="@bind(fmodel.pickedPostponed)" width="" height="" onSelect="" >
                         <listhead>
                             <listheader label="${c:l('number')}" width="70px" sort="auto" align="center"/>
                             <listheader label="${c:l('period_min')}" width="100px" sort="auto" align="center"/>
@@ -33,8 +33,8 @@
         </center>
                 
                 
-        <east size="550px" border="none" minsize="350"  hflex="true" splittable="true" >
-            <panel title="${c:l('invited_client')}" border="normal" height="100%" vflex="true">
+        <east size="550px" border="none" minsize="350"   splittable="true" >
+            <panel title="${c:l('invited_client')}" border="normal" height="100%" >
                 <panelchildren style="overflow: auto">
                     <vbox style="padding: 10px 10px;">
                         <label id="nom_cap" value="${c:l('invited_num')}" style="text-decoration:underline;"/>
@@ -54,10 +54,10 @@
         </east>
         
         
-        <south hflex="true" splittable="true"  minsize="150" size="270px">
+        <south  splittable="true"  minsize="150" size="270px">
             <panel title="${c:l('present_services')}" border="normal" height="100%">
                 <panelchildren>
-                    <listbox id="service_list" model="@load(fmodel.user.plan)" selectedItem="@bind(fmodel.pickedService)" width="100%" height="100%" onSelect="" vflex="true">
+                    <listbox id="service_list" model="@load(fmodel.user.plan)" selectedItem="@bind(fmodel.pickedService)" width="100%" height="100%" onSelect="" >
                         <listhead>
                             <listheader label="@load(fmodel.avaitColumn)" sort="auto" width="100px" align="center"/>
                             <listheader label="${c:l('priority')}" sort="auto" width="120px" align="center"/>

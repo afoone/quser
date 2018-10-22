@@ -14,17 +14,17 @@
             <vlayout>
                 <label value="${c:l('select_service')}" />
                 
-                <bandbox id="bd_redirect" readonly="true" autodrop="true" hflex="true">  
+                <bandbox id="bd_redirect" readonly="true" autodrop="true" >
                     <bandpopup>
                         <groupbox id="TreeTest" >
                             <caption label="${c:l('services')}" />
                             <tree id="tree_redirect_service_choose"  zclass="z-dottree" style="white-space:nowrap;"
-                                  vflex="true" width="490px"
+                                  width="490px"
                                   onSelect="bd_redirect.value=self.selectedItem.label; bd_redirect.close();"
                                   selectedItem="@bind(fmodel.pickedRedirectServ)"
                                   model="@load(fmodel.treeServs)">
                                 <treecols>
-                                    <treecol hflex="1" label="${c:l('tree_of_services')}" />
+                                    <treecol  label="${c:l('tree_of_services')}" />
                                 </treecols>
                                 <template name="model">
                                     <treeitem>
@@ -40,12 +40,12 @@
         
                 <div style="margin:10px 10px 10px 10px;"></div>
                 <label value="${c:l('comments')}"/>
-                <textbox id="tb_redirect" rows="10" value="" hflex="1" tabindex="2" />
+                <textbox id="tb_redirect" rows="10" value=""  tabindex="2" />
                 <checkbox id="cb_redirect" label="${c:l('return_after_redirect')}" />
                 <div style="float:right; margin:10px 0px 0px 0px;">
                     <hbox>
-                        <button id="OKredirectBtn" hflex="1" width="100px" label="${c:l('apply')}" onClick="@command('closeRedirectDialog')"/>
-                        <button id="closeRedirectBtn" hflex="1" width="100px" label="${c:l('cancel')}" onClick="redirectDialog.visible = false; event.stopPropagation();"/>
+                        <button id="OKredirectBtn"  width="100px" label="${c:l('apply')}" onClick="@command('closeRedirectDialog')"/>
+                        <button id="closeRedirectBtn"  width="100px" label="${c:l('cancel')}" onClick="redirectDialog.visible = false; event.stopPropagation();"/>
                     </hbox>
                 </div>
             </vlayout>
