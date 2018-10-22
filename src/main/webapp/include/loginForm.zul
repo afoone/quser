@@ -9,34 +9,34 @@
                            @validator('ru.apertum.qsys.quser.UserLoginValidator')">
         
         <hbox>
-            <vbox>
+            <!--vbox-->
                 <label value="${c:l('user')}" width="150px" />
                 <combobox width="200px" tabindex="1" model="@load(fmodel.usersForLogin)" forward="onOK=btnSubmit.onClick" value="@bind(login_form.name)">
                     <comboitem label="@load(each)"/>
                 </combobox>
-            </vbox>
-            <vbox>
+            <!--/vbox-->
+            <!--vbox-->
                 <label value="${c:l('password')}" width="150px" />
                 <textbox id="pwd" type="password" forward="onOK=btnSubmit.onClick" value="@bind(login_form.password)" width="200px" tabindex="2"/>
-            </vbox>
+            <!--/vbox-->
+            <div style="margin:3px 0px 0px 0px;">
+                <button width="120px" id="btnSubmit" label="${c:l('enter')}" onClick="@command('login')"  tabindex="3"/>
+                <label sclass="error" value="@bind(login_msgs['name'])" />
+            </div>
         </hbox>
-        <div style="margin:3px 0px 0px 0px;">
-            <button width="120px" id="btnSubmit" label="${c:l('enter')}" onClick="@command('login')"  tabindex="3"/>
-            <label class="error" value="@bind(login_msgs['name'])" />
-        </div>
+
     </div>
     
-    <div style="position: absolute; right: 10px; top: 10px; margin:0px 0px 0px 0px;" visible="@load(fmodel.login)">
+    <div style="position: absolute; right: 10px; top: 0px; margin:0px 0px 0px 0px;" visible="@load(fmodel.login)">
         <hbox>
             <div>
                 <label value="${c:l('user')}" style="margin:0px 7px 0px 0px;"/><label value="@load(fmodel.user.name)"/>
                 <separator  bar="true"/>
                 <label value="${c:l('office')}" style="margin:0px 7px 0px 0px;"/><label value="@load(fmodel.user.user.point)" />
-                <separator  bar="true"/>
-                <button width="120px" label="${c:l('out')}" onClick="@command('logout')">
-                </button>
             </div>
-            <image id="" src="/resources/img/ok32_2.png"/>
+            <button width="120px" label="${c:l('out')}" onClick="@command('logout')">
+            </button>
+            <image id="" src="/resources/img/ok32_2.png" sclass="close-session"/>
         </hbox>
     </div>
 

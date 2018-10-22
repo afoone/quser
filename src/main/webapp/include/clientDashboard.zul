@@ -3,9 +3,10 @@
 <zk xmlns="http://www.zkoss.org/2005/zul">
     
     <borderlayout>
-        
+
+        <!-- Panel para clientes diferidos-->
                 
-        <center border="none" hflex="min">
+        <center border="none" hflex="min" >
             <panel title="${c:l('postponed_clients')}" border="normal" height="100%">
                 <panelchildren>
                     <listbox  id="postpone_list" model="@load(fmodel.postponList)" selectedItem="@bind(fmodel.pickedPostponed)" width="" height="" onSelect="" >
@@ -76,7 +77,7 @@
                     </menupopup>
                     <timer id="timer_service_list" delay="10000" repeats="true" running="true" onTimer="@command('refreshListServices')"/>
                 </panelchildren>
-                <!-- Это окно для выора приоритета -->
+                <!-- This is a window for priority selection. -->
                 
             </panel>
                     

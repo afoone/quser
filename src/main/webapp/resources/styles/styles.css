@@ -1,0 +1,73 @@
+        .act-button:active {
+        background:	-webkit-linear-gradient(top, #FFFFFF 0%, #FFDDDD 100%); /* Chrome10+,Safari5.1+ */
+        background:	linear-gradient(to bottom, #FFFFFF 0%, #FFDDDD 100%); /* W3C */
+        color:black;
+        }
+        .act-button {
+        background:	-webkit-linear-gradient(top, #FFFFFF 0%, #5ddefb 100%); /* Chrome10+,Safari5.1+ */
+        background:	linear-gradient(to bottom, #FFFFFF 0%, #5ddefb 100%); /* W3C */
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+        }
+        .act-button:disabled {
+        background:	-webkit-linear-gradient(top, #FFFFFF 0%, #c8d7da 100%); /* Chrome10+,Safari5.1+ */
+        background:	linear-gradient(to bottom, #FFFFFF 0%, #c8d7da 100%); /* W3C */
+        color:whitesmoke;
+        }
+
+
+        .act-button:hover {
+        border-color: #FFFF00;
+        }
+
+.iprocuratio-top .z-button {
+    border-size: 0px;
+}
+
+.iprocuratio-top input.z-combobox-input {
+    height: 1.25em;
+}
+
+.iprocuratio-top .close-session {
+    margin-left: 0.5em;
+}
+
+.iprocuratio-top .z-label {
+  font-size: 0.9em;
+}
+
+.iprocuratio-top input.z-textbox{
+    height: 1.25em;
+}
+
+.iprocuratio-top button.z-button {
+    height: 1.2em;
+    /* font-size: 0.7em; */
+    /* align-content: center; */
+    padding: 0px;
+}
+
+.iprocuratio-top input.z-combobox {
+        height: 24px;
+    }
+
+.iprocuratio-top a.z-combobox-button {
+    height: 0.9em;
+    padding: 0px;
+    min-height: 0px;
+}
+
+
+
+.iprocuratio-bottom .z-toolbarbutton-content {
+    height: 1.25em;
+}
+
+.iprocuratio-bottom .z-south-body {
+    padding-top:0px;
+}
+
+.iprocuratio-admin button.z-button {
+ color: black;
+}
