@@ -1,25 +1,28 @@
-        .act-button:active {
-        background:	-webkit-linear-gradient(top, #FFFFFF 0%, #FFDDDD 100%); /* Chrome10+,Safari5.1+ */
-        background:	linear-gradient(to bottom, #FFFFFF 0%, #FFDDDD 100%); /* W3C */
-        color:black;
-        }
-        .act-button {
-        background:	-webkit-linear-gradient(top, #FFFFFF 0%, #5ddefb 100%); /* Chrome10+,Safari5.1+ */
-        background:	linear-gradient(to bottom, #FFFFFF 0%, #5ddefb 100%); /* W3C */
-        -webkit-border-radius: 2em;
-        -moz-border-radius: 2em;
-        border-radius: 2em;
-        }
-        .act-button:disabled {
-        background:	-webkit-linear-gradient(top, #FFFFFF 0%, #c8d7da 100%); /* Chrome10+,Safari5.1+ */
-        background:	linear-gradient(to bottom, #FFFFFF 0%, #c8d7da 100%); /* W3C */
-        color:whitesmoke;
-        }
+.act-button:active {
+    background:	-webkit-linear-gradient(top, #FFFFFF 0%, #FFDDDD 100%); /* Chrome10+,Safari5.1+ */
+    background:	linear-gradient(to bottom, #FFFFFF 0%, #FFDDDD 100%); /* W3C */
+    color:black;
+}
 
+.act-button {
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #5ddefb 100%);
+    background: linear-gradient(to bottom, #FFFFFF 0%, #5ddefb 100%);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    border-color: lightgrey;
+}
 
-        .act-button:hover {
-        border-color: #FFFF00;
-        }
+.act-button:disabled {
+    background:	-webkit-linear-gradient(top, #FFFFFF 0%, #c8d7da 100%); /* Chrome10+,Safari5.1+ */
+    background:	linear-gradient(to bottom, #FFFFFF 0%, #c8d7da 100%); /* W3C */
+    color:whitesmoke;
+    border-color: lightgrey;
+}
+
+.act-button:hover {
+    border-color: #FFFF00;
+}
 
 .iprocuratio-top .z-button {
     border-size: 0px;
@@ -58,8 +61,6 @@
     min-height: 0px;
 }
 
-
-
 .iprocuratio-bottom .z-toolbarbutton-content {
     height: 1.25em;
 }
@@ -71,3 +72,18 @@
 .iprocuratio-admin button.z-button {
  color: black;
 }
+
+.iprocuratio-main .z-listheader-content {
+    padding: 1px;
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.iprocuratio-main .z-listcell-content {
+    padding: 6px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+

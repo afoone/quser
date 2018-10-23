@@ -2,23 +2,25 @@
 
 <zk xmlns="http://www.zkoss.org/2005/zul">
     
-    <borderlayout>
+    <borderlayout sclass="iprocuratio-main">
 
         <!-- Panel para clientes diferidos-->
                 
         <center border="none" hflex="min" >
-            <panel title="${c:l('postponed_clients')}" border="normal" height="100%">
+            <panel title="${c:l('postponed_clients')}" border="normal" height="100%" >
                 <panelchildren>
                     <listbox  id="postpone_list" model="@load(fmodel.postponList)" selectedItem="@bind(fmodel.pickedPostponed)" width="" height="" onSelect="" >
-                        <listhead>
-                            <listheader label="${c:l('number')}" width="70px" sort="auto" align="center"/>
+                        <listhead height="1.2em">
+                            <listheader label="${c:l('number')}" width="100px" sort="auto" align="center"/>
                             <listheader label="${c:l('period_min')}" width="100px" sort="auto" align="center"/>
+                            <listheader label="${c:l('who_postponed')}" width="100px" sort="auto" align="center"/>
                             <listheader label="${c:l('status')}" sort="auto"/>
                         </listhead>
                         <template name="model" var="pCust">
                             <listitem  context="postponeListPopup">
                                 <listcell label="@load(pCust.getFullNumber()  )" />
                                 <listcell label="@load((pCust.postponPeriod > 0 ) ? pCust.postponPeriod : fmodel.l('unlimit')  )" />
+                                <listcell label="@load(pCust.getPostponedBy()  )" />
                                 <listcell label="@load(pCust.postponedStatus  )" />
                             </listitem>
                         </template>
@@ -83,6 +85,8 @@
                     
         </south>
     </borderlayout>
+
+
     <include id="incChangePriorityDialog" src="/include/dialog/changePriorityDialog.zul"/>
     <include id="incPostponeCustomerDialog" src="/include/dialog/postponeDialog.zul"/>
     <include id="incRedirectCustomerDialog" src="/include/dialog/redirectDialog.zul"/>

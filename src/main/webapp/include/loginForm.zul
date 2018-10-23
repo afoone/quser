@@ -34,7 +34,7 @@
                 <separator  bar="true"/>
                 <label value="${c:l('office')}" style="margin:0px 7px 0px 0px;"/><label value="@load(fmodel.user.user.point)" />
             </div>
-            <button width="120px" label="${c:l('out')}" onClick="@command('logout')">
+            <button width="120px" label="${c:l('out')}" onClick="@command('logout')" style="margin-top: 0.3em">
             </button>
             <image id="" src="/resources/img/ok32_2.png" sclass="close-session"/>
         </hbox>
